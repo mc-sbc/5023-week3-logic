@@ -1,0 +1,16 @@
+<!-- Including stylesheet -->
+<link rel="stylesheet" href="{{ url_for('static', 'styles.css') }}"/>
+
+<!-- HTML for table -->
+<table class="table">
+    <tr class="table-header">
+        <th class="table-cell">Student name</th>
+        <th class="table-cell">Grade</th>
+    </tr>
+    {% for key, value in grades.items() %}
+        <tr class="table-row">
+            <td class="table-cell">{{ key }}</td>
+            <td class="table-cell">{{ value }}</td>
+        </tr>
+    {% endfor %}
+</table>
